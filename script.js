@@ -1,4 +1,3 @@
-const apiKey = process.env.API_KEY;
 const apiUrl="/api/weather?city=";
 
 const searchBox=document.querySelector(".search input");
@@ -6,7 +5,7 @@ const searchBtn=document.querySelector(".search button");
 const weatherIcon=document.querySelector(".weather-icon");
 
 async function checkWeather(city){
-    const response=await fetch(apiUrl+city+`&appid=${apiKey}`);
+    const response=await fetch(apiUrl+city);
 
     if(response.status==404){
         
